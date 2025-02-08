@@ -4,9 +4,9 @@ import pandas as pd
 import numpy as np
 import openai
 
-app = Flask(__name__, template_folder='templates')
+app = Flask(__name__, template_folder='../templates')
 
-openai.api_key=os.environ.get('OPENAI_API_KEY')
+openai.api_key = os.environ.get('OPENAI_API_KEY')
 from openai import OpenAI
 client = OpenAI()
 
@@ -270,7 +270,7 @@ def generate_text():
     return render_template('input.html', message=message, originalquery=originalquery) 
     
 
-
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
+    
     
