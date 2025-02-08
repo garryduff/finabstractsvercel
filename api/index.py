@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 import openai
 
-app = Flask(__name__, template_folder='../templates')
+app = Flask(__name__, template_folder='/templates')
 
 openai.api_key = os.environ.get('OPENAI_API_KEY')
 from openai import OpenAI
